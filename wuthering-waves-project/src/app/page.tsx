@@ -34,203 +34,233 @@ const wutheringCharacters: Character[] = [
   {
     id: 1,
     name: "CAMELLYA",
-    title: "The Crimson Weaver",
+    title: "Sanguine Blossom",
     image: "https://i.pinimg.com/736x/7f/8c/0a/7f8c0a71600766f725e0adcf209b6b7c.jpg",
-    description: "A mysterious resonator who commands the power of threads and fate. Camellya weaves reality itself, manipulating threads of destiny to control the battlefield. Her abilities focus on crowd control and strategic positioning. She is known for her elegant yet deadly combat style, using threads that can cut through even the toughest materials.",
-    element: "Fusion",
-    weapon: "Scythe",
-    faction: "Independent",
-    region: "Forgotten Realms",
-    release: "Version 1.1",
-    grade: "S-Rank",
-    resonatorId: "WU-CAM-001",
-    stats: { hp: 14567, atk: 423, def: 289 },
+    description: "Is that you? The one always in my dreams... My seed of fate.",
+    element: "Havoc",
+    weapon: "Sword",
+    faction: "The Black Shores",
+    region: "The Black Shores",
+    release: "Version 1.4",
+    grade: "5-Star",
+    resonatorId: "WU-CAM-104", // Adjusted to follow standard naming
+    stats: { hp: 10560, atk: 480, def: 412 }, // Representative base stats
     skills: [
-      { name: "FATE'S THREAD", description: "Weaves threads that ensnare enemies, dealing Fusion damage and applying entanglement status." },
-      { name: "CRIMSON WEAVE", description: "Unleashes a web of crimson threads that slash through multiple enemies." },
-      { name: "DESTINY'S EMBRACE", description: "Ultimate ability that creates a domain where Camellya controls all threads of fate." },
-      { name: "WEAVER'S DANCE", description: "Passive skill that increases thread damage when enemies are entangled." }
+      { name: "SWEET-SMELLING SHADOWS", description: "Performs up to 5 consecutive attacks using vine-like blade whips, dealing Havoc damage." },
+      { name: "DARK NIGHT BLOSSOM", description: "Enters the 'Blossom' state, changing attack patterns and allowing for aerial combat maneuvers." },
+      { name: "EPHEMERAL RED", description: "Ultimate: Unleashes a massive burst of Havoc damage through a blooming crimson flower." },
+      { name: "REDOLENT THORNS", description: "Forte Circuit: Consumes 'Crimson Bud' to enhance damage and extend the Blossom state duration." }
     ],
-    voiceLine: "The threads of fate are mine to weave. Will you be caught in my tapestry?",
-    tags: ["Fusion", "Crowd Control", "S-Rank", "Strategic"]
-  },
+    voiceLine: "Is that you? The one always in my dreams... My seed of fate.",
+    tags: ["Havoc", "Main DPS", "5-Star", "The Black Shores"]
+},
   {
     id: 2,
     name: "SHOREKEEPER",
-    title: "Guardian of Tides",
+    title: "Euphonic Chrysalis",
     image: "https://i.pinimg.com/736x/9a/af/89/9aaf893a1edd4f727865d8afc03ea3ed.jpg",
-    description: "A stoic guardian who commands the power of oceans and tides. Shorekeeper's abilities revolve around water manipulation and defensive capabilities, making him an excellent tank and support character. He carries the weight of protecting coastal settlements from threats both above and below the waves.",
-    element: "Glacier",
-    weapon: "Greatsword",
-    faction: "Coastal Sentinels",
-    region: "Azure Coast",
-    release: "Launch",
-    grade: "A-Rank",
-    resonatorId: "WU-SHK-002",
-    stats: { hp: 17890, atk: 345, def: 456 },
+    description: "Through silence, civilization will endure on this shore. And this shore... is a testament to my existence.",
+    element: "Spectro",
+    weapon: "Rectifier",
+    faction: "The Black Shores",
+    region: "The Black Shores",
+    release: "Version 1.3",
+    grade: "5-Star",
+    resonatorId: "WU-SHK-103",
+    stats: { hp: 15450, atk: 380, def: 420 }, // Focused on high HP for healing scaling
     skills: [
-      { name: "TIDAL BARRIER", description: "Summons a wall of water that blocks incoming attacks and heals allies." },
-      { name: "ABYSSAL CRASH", description: "Smashes the ground with water-infused force, creating shockwaves." },
-      { name: "OCEAN'S WRATH", description: "Ultimate that calls forth a massive tidal wave to engulf enemies." },
-      { name: "MARINE FORTITUDE", description: "Passive that increases defense when near bodies of water." }
+      { name: "ORIGIN OF EVERYTHING", description: "Basic Attack: Commands butterflies to deal Spectro damage. Can be performed in mid-air." },
+      { name: "CHAOS THEORY", description: "Resonance Skill: Summons Flare Butterflies to heal allies and deal damage to nearby enemies." },
+      { name: "END OF ALL THINGS", description: "Ultimate: Creates a Stellar Realm domain that provides massive buffs and continuous healing based on Shorekeeper's HP." },
+      { name: "PROMETHEAN FLAME", description: "Forte Circuit: Enhances the Stellar Realm, allowing it to evolve and provide Crit Rate or Crit Damage boosts." }
     ],
-    voiceLine: "The tides obey my will. Stand firm, and let the ocean shield you.",
-    tags: ["Glacier", "Tank", "A-Rank", "Defensive"]
-  },
+    voiceLine: "In the silent depths of the stars, I have always been watching over you.",
+    tags: ["Spectro", "Healer", "5-Star", "Buffer"]
+},
   {
     id: 3,
     name: "PHROLOVA",
-    title: "Flame Dancer",
+    title: "Symphony of Beyondr",
     image: "https://i.pinimg.com/736x/22/d0/46/22d0467dba7c4f025cf4ccc9493a75e3.jpg",
-    description: "A fiery performer who dances with flames, using them as extensions of her emotions. Phrolova's combat style combines graceful movements with explosive fire attacks that intensify with her passion.",
-    element: "Fusion",
-    weapon: "Chakrams",
-    faction: "Traveling Troupe",
-    region: "Scorching Steppes",
-    release: "Version 1.3",
-    grade: "A-Rank",
-    resonatorId: "WU-PHR-003",
-    stats: { hp: 12980, atk: 467, def: 278 },
+    description: "Yet humans are but fragile flesh and bone, bound by the fleeting nature of time. Only in an eternity freed from both life and death can that boundary dissolve.",
+    element: "Havoc",
+    weapon: "Rectifier",
+    faction: "Fractsidus",
+    region: "Unknown",
+    release: "Version 2.0", 
+    grade: "5-Star",
+    resonatorId: "WU-PHR-007",
+    stats: { hp: 11200, atk: 510, def: 390 },
     skills: [
-      { name: "FLAME SPIRAL", description: "Creates a swirling vortex of fire that damages and pulls in enemies." },
-      { name: "BLAZING PIRANETTE", description: "Performs a fiery dance that leaves burning trails on the ground." },
-      { name: "INFERNO WALTZ", description: "Ultimate that summons pillars of fire that erupt in sequence." }
+      { name: "RESONANT DISSONANCE", description: "Basic Attack: Commands her doll to perform multiple stages of Havoc attacks, weaving dark energy into the air." },
+      { name: "PUPPETEER'S CHORAL", description: "Resonance Skill: Summons shadow spikes that track enemies, dealing Havoc damage and generating Dissonance energy." },
+      { name: "REQUIEM OF ETERNAL NIGHT", description: "Ultimate: Creates a massive field of absolute zero, suppressing enemies and dealing massive Havoc damage over time." },
+      { name: "VOID SYMPHONY", description: "Forte Circuit: When Dissonance is full, her doll enters a 'Hysteria' state, increasing attack speed and ignoring a portion of enemy defense." }
     ],
-    voiceLine: "My heart burns with passion! Let the flames guide our dance!",
-    tags: ["Fusion", "DPS", "A-Rank", "Mobile"]
-  },
+    voiceLine: "Life is a noisy, messy affair. Let me bring you the gift of silence.",
+    tags: ["Havoc", "Main DPS", "5-Star", "Fractsidus"]
+},
   {
     id: 4,
     name: "LYNAE",
-    title: "Forest Warden",
+    title: "Radiant Spectrum",
     image: "https://i.pinimg.com/736x/48/f7/09/48f7098ee1c6cf4e1658b105e3835fbb.jpg",
-    description: "A guardian of ancient forests who commands nature itself. Lynae can manipulate plants and wildlife, using them both for offense and defense. Her connection to nature allows her to heal allies and control the battlefield.",
+    description: "Look at you now... Do you even remember who you are? It's time. The dream ends.",
     element: "Spectro",
-    weapon: "Bow",
-    faction: "Emerald Covenant",
-    region: "Whispering Woods",
-    release: "Launch",
-    grade: "A-Rank",
-    resonatorId: "WU-LYN-004",
-    stats: { hp: 14234, atk: 412, def: 321 },
+    weapon: "Pistols",
+    faction: "Startorch Academy",
+    region: "Lahai-Roi",
+    release: "Version 3.0",
+    grade: "5-Star",
+    resonatorId: "WU-LYN-105",
+    stats: { hp: 11250, atk: 512, def: 395 }, // Base stats at high level
     skills: [
-      { name: "VINE GRASP", description: "Summons vines to immobilize enemies and drain their vitality." },
-      { name: "NATURE'S BLESSING", description: "Heals allies and creates a protective barrier of leaves." },
-      { name: "ANCIENT AWAKENING", description: "Ultimate that awakens the forest spirits to overwhelm enemies." }
+      { name: "CHROMA DRIFT", description: "Basic Attack: Fires Spectro-infused paint rounds. While moving, she enters a skating state that increases mobility." },
+      { name: "LYNAE-STYLE PALETTES", description: "Resonance Skill: Sprays vibrant pigments that deal Spectro damage and build 'Lumiflow' energy." },
+      { name: "PRISMATIC OVERBLAST", description: "Ultimate: Unleashes a kaleidoscopic explosion of light, dealing massive Spectro damage and buffing team Attack." },
+      { name: "CHROMATICITY MODELING", description: "Forte Circuit: Consumes Lumiflow to enter the 'Kaleidoscopic Parade' state, enhancing her shots into 'Spark Collisions'." }
     ],
-    voiceLine: "The forest whispers ancient secrets. Listen closely, and you may hear them too.",
-    tags: ["Spectro", "Support", "A-Rank", "Healer"]
-  },
+    voiceLine: "Look at you now... Do you even remember who you are? It's time. The dream ends.",
+    tags: ["Spectro", "Sub-DPS", "5-Star", "Amplifier"]
+},
   {
     id: 5,
     name: "CHISA",
-    title: "Blossom Dancer",
+    title: "Eye of Unravelling",
     image: "https://i.pinimg.com/736x/6d/29/2a/6d292ab7e32d965c4166fc4dfe1c1d46.jpg",
-    description: "An elegant warrior who dances with cherry blossoms, using them as both weapon and shield. Chisa's graceful movements conceal deadly precision, making her a versatile fighter on the battlefield.",
-    element: "Spectro",
-    weapon: "Dual Blades",
-    faction: "Sakura Guild",
-    region: "Hanamura",
-    release: "Version 1.0",
-    grade: "S-Rank",
-    resonatorId: "WU-CHS-005",
-    stats: { hp: 12678, atk: 489, def: 234 },
+    description: "Whatever mires or chasms lie ahead, I will tread upon you and wade through!",
+    element: "Havoc",
+    weapon: "Broadblade",
+    faction: "Startorch Academy",
+    region: "The Black Shores",
+    release: "Version 2.8",
+    grade: "5-Star",
+    resonatorId: "WU-CHS-105",
+    stats: { hp: 11450, atk: 510, def: 415 },
     skills: [
-      { name: "PETAL STORM", description: "Creates a vortex of razor-sharp cherry blossoms that damages enemies." },
-      { name: "BLOSSOM STEP", description: "Dashes through enemies leaving a trail of explosive petals." },
-      { name: "SAKURA NOVEMBER", description: "Ultimate that creates a massive cherry blossom explosion." }
+      { name: "REIGN OF SILENCE", description: "Basic Attack: Performs up to 4 consecutive Broadblade strikes. Hitting enemies builds 'Ring of Chainsaw' energy." },
+      { name: "FRACTURED COMPOSITION", description: "Resonance Skill: Performs a heavy slash. If energy is full, she enters 'Chainsaw Mode,' replacing attacks with high-frequency saw strikes." },
+      { name: "MOMENT OF NIHILITY", description: "Ultimate: Unleashes a devastating vertical cleave that ignores a portion of the enemy's defense and deals massive Havoc damage." },
+      { name: "SIGHT OF UNRAVELING", description: "Forte Circuit: While in Chainsaw Mode, she applies 'Unseen Snare' to enemies, causing them to take additional Havoc damage over time." }
     ],
-    voiceLine: "Every petal tells a story. Let me show you the dance of the falling sakura.",
-    tags: ["Spectro", "DPS", "S-Rank", "Mobile"]
-  },
+    voiceLine: "I can break down any problem into its smallest parts. Let’s see how you hold together.",
+    tags: ["Havoc", "Hybrid Support", "5-Star", "Chainsaw Mode"]
+},
   {
     id: 6,
     name: "CARTETHIYA",
-    title: "Shadow Weaver",
+    title: "Feathered Tempest",
     image: "https://i.pinimg.com/1200x/44/6d/94/446d94d8a99d3044cc267fab4974f0a7.jpg",
-    description: "A master of shadow manipulation who moves unseen through darkness. Cartethiya specializes in stealth and assassination, using shadows to disorient enemies and strike from unexpected angles.",
-    element: "Havoc",
-    weapon: "Daggers",
-    faction: "Shadow Syndicate",
-    region: "Umbra Depths",
-    release: "Version 1.0",
-    grade: "A-Rank",
-    resonatorId: "WU-CRT-006",
-    stats: { hp: 11567, atk: 467, def: 245 },
+    description: "Though the night may be long, the dawn always follows.",
+    element: "Aero",
+    weapon: "Sword",
+    faction: "Ragunna",
+    region: "Rinascita",
+    release: "Version 2.4",
+    grade: "5-Star",
+    resonatorId: "WU-CRT-106",
+    stats: { hp: 11567, atk: 545, def: 410 },
     skills: [
-      { name: "SHADOW STEP", description: "Becomes invisible and moves through shadows to reposition." },
-      { name: "DARK EMBRACE", description: "Creates shadow clones that attack enemies simultaneously." },
-      { name: "NIGHTFALL", description: "Ultimate that plunges the area into darkness, amplifying all shadow damage." }
+      { 
+        name: "SWORD TO CARVE MY FORMS", 
+        description: "Basic Attack: Performs up to 5 rapid Sword strikes. In mid-air, consumes Stamina to perform a Plunging Attack." 
+      },
+      { 
+        name: "SWORD TO BEAR THEIR NAMES", 
+        description: "Resonance Skill: Dashes forward with a gale-force thrust. If 'Tempest' is active, this skill transforms into an aerial flurry." 
+      },
+      { 
+        name: "A KNIGHT'S HEARTFELT PRAYERS", 
+        description: "Resonance Liberation: Unleashes the power of the Threnodian Leviathan, dealing massive Aero DMG and pulling nearby enemies into a vortex." 
+      },
+      { 
+        name: "TEMPEST", 
+        description: "Forte Circuit: Accumulate 'Gale' through attacks. When full, Heavy Attacks consume Gale to enter the Tempest state, granting flight and enhanced Aero Erosion." 
+      }
     ],
-    voiceLine: "In darkness, all secrets are revealed. Your shadow betrays you.",
-    tags: ["Havoc", "Assassin", "A-Rank", "Stealth"]
-  },
+    voiceLine: "Whether the future is bright or dim, I will hold the blade firmly and confront all that comes her way.",
+    tags: ["Aero", "Main DPS", "5-Star", "Traction", "Aero Erosion"]
+},
   {
     id: 7,
     name: "CARLOTTA",
-    title: "Iron Maiden",
+    title: "Crystal Remorph",
     image: "https://i.pinimg.com/736x/a5/da/e4/a5dae41430e6ccb6f66ab6989598909d.jpg",
-    description: "A heavy armor specialist who wields massive mechanical weaponry. Carlotta excels at breaking enemy defenses and controlling the battlefield with her overwhelming firepower and durability.",
-    element: "Fusion",
-    weapon: "Heavy Cannon",
-    faction: "Iron Legion",
-    region: "Foundry City",
-    release: "Version 1.2",
-    grade: "A-Rank",
+    description: "No need to rush... The ball has only just begun.",
+    element: "Glacio",
+    weapon: "Pistols",
+    faction: "Montelli Family",
+    region: "Rinascita",
+    release: "Version 2.0",
+    grade: "5-Star",
     resonatorId: "WU-CRL-007",
-    stats: { hp: 16543, atk: 378, def: 512 },
+    stats: { hp: 10850, atk: 520, def: 380 },
     skills: [
-      { name: "ARTILLERY BARRAGE", description: "Unleashes a barrage of explosive rounds that pierce through enemies." },
-      { name: "IRON FORTRESS", description: "Deploys a stationary shield that blocks all frontal attacks." },
-      { name: "APOCALYPSE CANNON", description: "Ultimate that charges a massive energy cannon to obliterate everything in its path." }
+      { name: "NECESSARY MEASURES", description: "Basic Attack: Fires high-precision Glacio shots. Can perform unique Mid-air Attacks while immune to interruption." },
+      { name: "CHROMATIC SPLENDOR", description: "Resonance Skill: Fires crystal shards that mark enemies with 'Deconstruction,' dealing Glacio DMG and generating 'Substance'." },
+      { name: "FATAL FINALE", description: "Resonance Liberation: Fires her musket in a wide arc, dealing massive AoE Glacio DMG and entering the 'Twilight Tango' state." },
+      { name: "IMMINENT OBLIVION", description: "Forte Circuit: Consumes all 'Substance' and 'Moldable Crystals' to unleash a high-damage Heavy Attack that resets her Skill cooldown." }
     ],
-    voiceLine: "My cannon speaks louder than words. Let its roar be the last thing you hear!",
-    tags: ["Fusion", "Tank", "A-Rank", "Artillery"]
-  },
+    voiceLine: "Life is like a gem—beautiful before it fades. But I decide when the light goes out.",
+    tags: ["Glacio", "Main DPS", "5-Star", "Pistols"]
+},
   {
     id: 8,
     name: "AEMEATH",
-    title: "Sky Sovereign",
+    title: "Guiding Starlance",
     image: "https://i.pinimg.com/736x/11/2c/3c/112c3c768f93c40ccec510a5a2c1b528.jpg",
-    description: "A noble ruler who commands the winds and skies. Aemeath floats above the battlefield, summoning tornadoes and controlling air currents to dominate her opponents with aerial supremacy.",
-    element: "Electro",
-    weapon: "Glaive",
-    faction: "Sky Kingdom",
-    region: "Floating Isles",
-    release: "Version 1.4",
-    grade: "S-Rank",
+    description: "Time to give your future some thought. What will you do with your lives?",
+    element: "Fusion",
+    weapon: "Sword",
+    faction: "N/A",
+    region: "N/A",
+    release: "Soon",
+    grade: "5-Star",
     resonatorId: "WU-AEM-008",
     stats: { hp: 13120, atk: 502, def: 295 },
     skills: [
-      { name: "GALE SLASH", description: "Creates razor-sharp wind blades that cut through multiple enemies." },
-      { name: "CYCLONE DOMAIN", description: "Summons a localized tornado that pulls in and damages enemies." },
-      { name: "TYPHOON MONARCH", description: "Ultimate that creates a massive storm that devastates the battlefield." }
+      { name: "Unknown", description: "Uknown." },
+      { name: "Unknown", description: "Uknown." },
+      { name: "Unknown", description: "Uknown." }
     ],
-    voiceLine: "The winds heed my call. Feel the fury of the storm!",
-    tags: ["Electro", "AOE", "S-Rank", "Crowd Control"]
+    voiceLine: "I. MEANT. EVERY. WORD!",
+    tags: ["Fusion", "Main DPS", "5-Rank", "Uknown"]
   },
   {
     id: 9,
     name: "IUNO",
-    title: "Star Weaver",
+    title: "Stasis, Cycle, Renewal",
     image: "https://i.pinimg.com/736x/f2/52/a0/f252a0a0442ea2ee66df7d891f68114c.jpg",
-    description: "A celestial being who commands the power of stars and constellations. Iuno can manipulate cosmic energy, creating gravitational fields and summoning meteor showers to control the flow of battle.",
-    element: "Spectro",
-    weapon: "Orb",
-    faction: "Celestial Observers",
-    region: "Starlight Spire",
-    release: "Version 1.3",
-    grade: "S-Rank",
-    resonatorId: "WU-IUN-009",
-    stats: { hp: 13456, atk: 523, def: 289 },
+    description: "If the moon refuses to shine on the darkness ahead, then it's up to me— To draw fate's bow and release it where I choose!",
+    element: "Aero",
+    weapon: "Rectifier", // Priestess archetype usually fits the Rectifier class
+    faction: "Tetragon Temple",
+    region: "Septimont",
+    release: "September 17, 2025 (Version 2.6)",
+    grade: "5-Star",
+    resonatorId: "WU-IUN-109",
+    stats: { hp: 10450, atk: 525, def: 385 },
     skills: [
-      { name: "STARFALL", description: "Summons a rain of falling stars that damages enemies in an area." },
-      { name: "COSMIC PULL", description: "Creates a gravitational anomaly that pulls enemies together." },
-      { name: "GALACTIC COLLAPSE", description: "Ultimate that creates a temporary black hole that devastates the battlefield." }
+      { 
+        name: "MOON STEPS", 
+        description: "Basic Attack: Commands Aero energy to strike enemies, mirroring the phases of the moon." 
+      },
+      { 
+        name: "FORESIGHT FUGUE", 
+        description: "Resonance Skill: Unleashes a predictive pulse that deals Aero DMG and grants Iuno 'Prophetic Insight'." 
+      },
+      { 
+        name: "BENEATH LUNAR TIDES", 
+        description: "Resonance Liberation: Rewrites the battlefield's fate, dealing massive AoE Aero DMG and increasing the team's Energy Regen." 
+      },
+      { 
+        name: "EBB AND FLOW", 
+        description: "Forte Circuit: Consumes Prophetic Insight to enter the 'Fate Defier' state, allowing for rapid-fire Aero projectiles that track enemies." 
+      }
     ],
-    voiceLine: "The stars align at my command. Witness the birth and death of galaxies!",
-    tags: ["Spectro", "Crowd Control", "S-Rank", "Cosmic"]
-  }
+    voiceLine: "If the moon refuses to shine on the darkness ahead, then it's up to me— To draw fate's bow and release it where I choose!",
+    tags: ["Aero", "Sub-DPS", "5-Star", "Buffer"]
+}
 ];
 
 export default function Home() {
