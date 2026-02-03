@@ -1091,3 +1091,20 @@ body {
 .stat-icon {
   stroke-width: 2px;
 }
+.section-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--accent-purple);
+}
+
+.studio-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--accent-cyan);
+}
+
+.voice-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--accent-pink);
+}

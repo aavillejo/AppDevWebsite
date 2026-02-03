@@ -536,7 +536,7 @@ export default function Home() {
       <div className="container">
         <header className="header">
           <div className="wuwa-logo">WUTHERING WAVES</div>
-          <div className="patch-badge">RESONANT TIDES • 1.2</div>
+          <div className="patch-badge">RESONANT TIDES</div>
           <p className="subtitle">Character Archives Database</p>
           <div className="resonance-status">
             <span className="resonance-text">RESONANCE STATUS:</span>
@@ -609,132 +609,136 @@ export default function Home() {
 
         {/* Expanded Character Modal */}
         <div className={`modal ${selectedCharacter ? 'active' : ''}`} onClick={handleModalClick}>
-          {selectedCharacter && (
-            <>
-              <button className="close-modal">
-                <X className="icon" /> {/* X is the close/delete icon */}
-                <span>CLOSE</span>
-              </button>
+  {selectedCharacter && (
+    <>
+      {/* FIXED: Added onClick handler */}
+      <button className="close-modal" onClick={closeModal}>
+        <X className="icon" />
+        <span>CLOSE</span>
+      </button>
 
-              <div className="modal-content">
-                <div className="modal-body">
-                  {/* Left Column - Character Showcase */}
-                  <div className="character-showcase">
-                    <div className="character-art">
-                      <img src={selectedCharacter.image} alt={selectedCharacter.name} />
-                      <div 
-                        className="element-glow" 
-                        style={{ color: elementColors[selectedCharacter.element as keyof typeof elementColors] }}
-                      ></div>
-                    </div>
-                    
-                    <div className="character-meta">
-                      <div className="meta-item">
-                        <span className="meta-label">Element</span>
-                        <span className="meta-value">{selectedCharacter.element}</span>
-                      </div>
-                      <div className="meta-item">
-                        <span className="meta-label">Weapon</span>
-                        <span className="meta-value">{selectedCharacter.weapon}</span>
-                      </div>
-                      <div className="meta-item">
-                        <span className="meta-label">Rarity</span>
-                        <span className="meta-value">{selectedCharacter.grade}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Right Column - Character Details */}
-                  <div className="character-details">
-                    <div className="detail-header">
-                      <div className="character-id">
-                        <span className="id-label">RESONATOR ID:</span>
-                        <span className="id-value">{selectedCharacter.resonatorId}</span>
-                      </div>
-                      <h2>{selectedCharacter.name}</h2>
-                      <div className="detail-subtitle">{selectedCharacter.title}</div>
-                    </div>
-
-                    {/* Stats */}
-                    <div className="stats-grid">
-                      <div className="stat-card">
-                        <Heart className="stat-icon" />
-                        <span className="stat-label">Base HP</span>
-                        <span className="stat-value">{selectedCharacter.stats.hp.toLocaleString()}</span>
-                      </div>
-                      <div className="stat-card">
-                        <Zap className="stat-icon" />
-                        <span className="stat-label">Base ATK</span>
-                        <span className="stat-value">{selectedCharacter.stats.atk}</span>
-                      </div>
-                      <div className="stat-card">
-                        <Shield className="stat-icon" />
-                        <span className="stat-label">Base DEF</span>
-                        <span className="stat-value">{selectedCharacter.stats.def}</span>
-                      </div>
-                    </div>
-
-                    {/* Description */}
-                    <div className="detail-section">
-                      <div className="section-header">
-                        <i className="fas fa-scroll"></i>
-                        <h3 className="section-title">CHARACTER PROFILE</h3>
-                      </div>
-                      <p>{selectedCharacter.description}</p>
-                    </div>
-
-                    {/* Skills */}
-                    <div className="detail-section">
-                      <div className="section-header">
-                        <i className="fas fa-fire"></i>
-                        <h3 className="section-title">RESONANCE ABILITIES</h3>
-                      </div>
-                      <div className="skills-grid">
-                        {selectedCharacter.skills.map((skill, index) => (
-                          <div key={index} className="skill-card">
-                            <div className="skill-name">{skill.name}</div>
-                            <p className="skill-desc">{skill.description}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Voice Line */}
-                    <div className="voice-card">
-                      <div className="voice-content">
-                        <i className="fas fa-volume-up voice-icon"></i>
-                        <p className="voice-text">"{selectedCharacter.voiceLine}"</p>
-                      </div>
-                    </div>
-
-                    {/* Additional Info */}
-                    <div className="lore-grid">
-                      <div className="lore-item">
-                        <span className="lore-label">Faction</span>
-                        <span className="lore-value">{selectedCharacter.faction}</span>
-                      </div>
-                      <div className="lore-item">
-                        <span className="lore-label">Region</span>
-                        <span className="lore-value">{selectedCharacter.region}</span>
-                      </div>
-                      <div className="lore-item">
-                        <span className="lore-label">Release</span>
-                        <span className="lore-value">{selectedCharacter.release}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <div className="modal-content">
+        <div className="modal-body">
+          {/* Left Column - Character Showcase */}
+          <div className="character-showcase">
+            <div className="character-art">
+              <img src={selectedCharacter.image} alt={selectedCharacter.name} />
+              <div 
+                className="element-glow" 
+                style={{ color: elementColors[selectedCharacter.element as keyof typeof elementColors] }}
+              ></div>
+            </div>
+            
+            <div className="character-meta">
+              <div className="meta-item">
+                <span className="meta-label">Element</span>
+                <span className="meta-value">{selectedCharacter.element}</span>
               </div>
-            </>
-          )}
+              <div className="meta-item">
+                <span className="meta-label">Weapon</span>
+                <span className="meta-value">{selectedCharacter.weapon}</span>
+              </div>
+              <div className="meta-item">
+                <span className="meta-label">Rarity</span>
+                <span className="meta-value">{selectedCharacter.grade}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Character Details */}
+          <div className="character-details">
+            <div className="detail-header">
+              <div className="character-id">
+                <span className="id-label">RESONATOR ID:</span>
+                <span className="id-value">{selectedCharacter.resonatorId}</span>
+              </div>
+              <h2>{selectedCharacter.name}</h2>
+              <div className="detail-subtitle">{selectedCharacter.title}</div>
+            </div>
+
+            {/* Stats */}
+            <div className="stats-grid">
+              <div className="stat-card">
+                <Heart className="stat-icon" />
+                <span className="stat-label">Base HP</span>
+                <span className="stat-value">{selectedCharacter.stats.hp.toLocaleString()}</span>
+              </div>
+              <div className="stat-card">
+                <Zap className="stat-icon" />
+                <span className="stat-label">Base ATK</span>
+                <span className="stat-value">{selectedCharacter.stats.atk}</span>
+              </div>
+              <div className="stat-card">
+                <Shield className="stat-icon" />
+                <span className="stat-label">Base DEF</span>
+                <span className="stat-value">{selectedCharacter.stats.def}</span>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="detail-section">
+              <div className="section-header">
+                {/* FIXED: Changed to Lucide */}
+                <Scroll className="section-icon" />
+                <h3 className="section-title">CHARACTER PROFILE</h3>
+              </div>
+              <p>{selectedCharacter.description}</p>
+            </div>
+
+            {/* Skills */}
+            <div className="detail-section">
+              <div className="section-header">
+                {/* FIXED: Changed to Lucide */}
+                <Flame className="section-icon" />
+                <h3 className="section-title">RESONANCE ABILITIES</h3>
+              </div>
+              <div className="skills-grid">
+                {selectedCharacter.skills.map((skill, index) => (
+                  <div key={index} className="skill-card">
+                    <div className="skill-name">{skill.name}</div>
+                    <p className="skill-desc">{skill.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Voice Line */}
+            <div className="voice-card">
+              <div className="voice-content">
+                {/* FIXED: Changed to Lucide */}
+                <Volume2 className="voice-icon" />
+                <p className="voice-text">"{selectedCharacter.voiceLine}"</p>
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className="lore-grid">
+              <div className="lore-item">
+                <span className="lore-label">Faction</span>
+                <span className="lore-value">{selectedCharacter.faction}</span>
+              </div>
+              <div className="lore-item">
+                <span className="lore-label">Region</span>
+                <span className="lore-value">{selectedCharacter.region}</span>
+              </div>
+              <div className="lore-item">
+                <span className="lore-label">Release</span>
+                <span className="lore-value">{selectedCharacter.release}</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </>
+  )}
+</div>
 
         <footer className="footer">
           <div className="copyright">
             © KURO GAMES • WUTHERING WAVES
           </div>
           <div className="studio-info">
-            <i className="fas fa-gamepad"></i>
+            <Gamepad2 className="studio-icon" />
             <span className="studio-name">KURO GAME STUDIO</span>
           </div>
           <div className="footer-links">
