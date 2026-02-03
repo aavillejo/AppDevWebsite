@@ -2,6 +2,21 @@
 
 import { useState, useEffect } from 'react';
 import './globals.css';
+import { 
+  X,                 // for close icon
+  Gamepad2,          // for gamepad icon  
+  Volume2,           // for volume icon
+  Scroll,            // for scroll icon
+  Flame,             // for fire icon
+  Heart,             // for heart icon
+  Zap,               // for bolt/attack icon
+  Shield,            // for shield icon
+  ChevronDown,       // for chevron down
+  Wind,              // for wind icon
+  HeartPulse,        // alternative heart icon
+  Swords,            // for skills/attacks
+  Sparkles           // for effects
+} from 'lucide-react';
 
 interface Character {
   id: number;
@@ -263,7 +278,7 @@ const wutheringCharacters: Character[] = [
     voiceLine: "If the moon refuses to shine on the darkness ahead, then it's up to me— To draw fate's bow and release it where I choose!",
     tags: ["Aero", "Sub-DPS", "5-Star", "Buffer"]
   },
-  // NEW CHARACTERS - START (You can edit these)
+  
   {
     id: 10,
     name: "GALBRENA",
@@ -271,7 +286,7 @@ const wutheringCharacters: Character[] = [
     image: "https://i.pinimg.com/736x/1f/c0/9d/1fc09dd440aaab6449faa6d246e15070.jpg",
     description: "Who's my next prey? Once, they called me Angel. Now, I am the flame that consumes the Abyss.",
     element: "Fusion",
-    weapon: "Pistols", // Her "Trigger" and "Hellflare" skills align with the ranged slayer/pistol class
+    weapon: "Pistols",
     faction: "The Black Shores",
     region: "Septimont (Formerly) / Solaris-3",
     release: "Version 2.7",
@@ -312,7 +327,7 @@ const wutheringCharacters: Character[] = [
     release: "Version 2.1",
     grade: "5-Star",
     resonatorId: "WU-BRN-111",
-    stats: { hp: 15200, atk: 380, def: 445 }, // Higher HP for healer scaling
+    stats: { hp: 15200, atk: 380, def: 445 }, 
     skills: [
       { 
         name: "CAPTAIN'S RHAPSODY", 
@@ -474,7 +489,6 @@ const wutheringCharacters: Character[] = [
     voiceLine: "I am a mere mortal, but my blade speaks with the authority of the sun.",
     tags: ["Electro", "Main DPS", "5-Star", "Heavy Attack DMG", "DMG Amplification"]
 }
-  // NEW CHARACTERS - END
 ];
 
 export default function Home() {
@@ -584,11 +598,11 @@ export default function Home() {
             </div>
             <div className="terminal-line">
               <span className="prompt">&gt;</span>
-              <span>CONNECTION: Secure link established with Kuro Network</span>
+              <span>CONNECTION: Secure link established with Kuro Games</span>
             </div>
             <div className="terminal-line">
               <span className="prompt">&gt;</span>
-              <span>UPDATE: 6 new resonator slots allocated. Ready for data input.</span>
+              <span>UPDATE: Soon...</span>
             </div>
           </div>
         </main>
@@ -597,8 +611,8 @@ export default function Home() {
         <div className={`modal ${selectedCharacter ? 'active' : ''}`} onClick={handleModalClick}>
           {selectedCharacter && (
             <>
-              <button className="close-modal" onClick={closeModal}>
-                <i className="fas fa-times"></i>
+              <button className="close-modal">
+                <X className="icon" /> {/* X is the close/delete icon */}
                 <span>CLOSE</span>
               </button>
 
@@ -644,17 +658,17 @@ export default function Home() {
                     {/* Stats */}
                     <div className="stats-grid">
                       <div className="stat-card">
-                        <i className="fas fa-heartbeat stat-icon"></i>
+                        <Heart className="stat-icon" />
                         <span className="stat-label">Base HP</span>
                         <span className="stat-value">{selectedCharacter.stats.hp.toLocaleString()}</span>
                       </div>
                       <div className="stat-card">
-                        <i className="fas fa-bolt stat-icon"></i>
+                        <Zap className="stat-icon" />
                         <span className="stat-label">Base ATK</span>
                         <span className="stat-value">{selectedCharacter.stats.atk}</span>
                       </div>
                       <div className="stat-card">
-                        <i className="fas fa-shield-alt stat-icon"></i>
+                        <Shield className="stat-icon" />
                         <span className="stat-label">Base DEF</span>
                         <span className="stat-value">{selectedCharacter.stats.def}</span>
                       </div>
@@ -730,7 +744,7 @@ export default function Home() {
             <a href="#" className="footer-link">GAME UPDATES</a>
           </div>
           <div className="version-info">
-            VERSION 1.2
+            AARON VILLEJO
           </div>
         </footer>
       </div>

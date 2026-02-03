@@ -1,4 +1,7 @@
-/* Wuthering Waves Theme - Black/Purple */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary-dark: #0a0a1a;
   --secondary-dark: #1a1035;
@@ -32,7 +35,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Wuthering Waves Signature Pattern */
 .wuwa-pattern {
   position: fixed;
   top: 0;
@@ -47,7 +49,6 @@ body {
   z-index: 1;
 }
 
-/* Element Energy Waves */
 .element-waves {
   position: fixed;
   width: 100%;
@@ -209,7 +210,6 @@ body {
   text-align: center;
 }
 
-/* Character Grid - Wuthering Waves Card Style */
 .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -247,7 +247,6 @@ body {
   z-index: 2;
 }
 
-/* CHARACTER IMAGES - IMPROVED */
 .character-image {
   width: 100%;
   height: 320px; /* Increased height */
@@ -263,40 +262,39 @@ body {
   object-position: center 15%; /* Adjust on hover for better view */
 }
 
-/* Character-specific image adjustments for better framing */
-.character-card:nth-child(1) .character-image { /* CAMELLYA */
+.character-card:nth-child(1) .character-image {
   object-position: center 10%;
 }
 
-.character-card:nth-child(2) .character-image { /* SHOREKEEPER */
+.character-card:nth-child(2) .character-image { 
   object-position: center 5%;
 }
 
-.character-card:nth-child(3) .character-image { /* PHROLOVA */
+.character-card:nth-child(3) .character-image {
   object-position: center 15%;
 }
 
-.character-card:nth-child(4) .character-image { /* LYNAE */
+.character-card:nth-child(4) .character-image { 
   object-position: center 10%;
 }
 
-.character-card:nth-child(5) .character-image { /* CHISA */
+.character-card:nth-child(5) .character-image {
   object-position: center 5%;
 }
 
-.character-card:nth-child(6) .character-image { /* CARTETHIYA */
+.character-card:nth-child(6) .character-image { 
   object-position: center 10%;
 }
 
-.character-card:nth-child(7) .character-image { /* CARLOTTA */
+.character-card:nth-child(7) .character-image { 
   object-position: center 15%;
 }
 
-.character-card:nth-child(8) .character-image { /* AEMEATH */
+.character-card:nth-child(8) .character-image { 
   object-position: center 10%;
 }
 
-.character-card:nth-child(9) .character-image { /* IUNO */
+.character-card:nth-child(9) .character-image {
   object-position: center 10%;
 }
 
@@ -488,7 +486,6 @@ body {
   height: fit-content;
 }
 
-/* Character Art in Modal - IMPROVED */
 .character-art {
   position: relative;
   overflow: hidden;
@@ -1024,4 +1021,73 @@ body {
 ::selection {
   background: rgba(139, 92, 246, 0.3);
   color: var(--text-primary);
+}
+.lucide {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Stats icons */
+.stat-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--accent-cyan);
+  margin-bottom: 1rem;
+}
+
+/* Close button icon */
+.close-modal .lucide {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* Voice line icon */
+.voice-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--accent-pink);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+/* Section header icons */
+.section-header .lucide {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--accent-purple);
+}
+
+/* Gamepad icon in footer */
+.studio-info .lucide {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--accent-cyan);
+}
+
+/* Wind icon in logo */
+.wuwa-logo .lucide {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--accent-cyan);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.lucide-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prompt .lucide {
+  width: 0.8rem;
+  height: 0.8rem;
+  color: var(--accent-pink);
+}
+
+.close-modal .lucide,
+.voice-icon,
+.stat-icon {
+  stroke-width: 2px;
 }
